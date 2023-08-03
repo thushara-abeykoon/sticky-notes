@@ -1,0 +1,17 @@
+.btnBackground{
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    background-color: #3E001F;
+    cursor: pointer;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.btnBackground:hover{
+    box-shadow: 0px 0px 10px 2px #b2b2b2;
+}
+.btnBackground svg{
+    margin-left:12px ;
+    margin-top:5px ;
+}

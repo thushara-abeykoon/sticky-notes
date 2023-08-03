@@ -1,0 +1,9 @@
+.noteContainer{
+    border-radius: 20px;
+    height: 100%;
+    margin: 0px 30px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    overflow: scroll;
+}
