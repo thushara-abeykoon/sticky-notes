@@ -3,7 +3,7 @@
     flex-direction: column;
     padding: 20px 0px;
     border-radius: 20px;
-    height: 92vh;
+    height: 90vh;
     min-width: 400px;
     max-width: 1000px;
     margin: auto;
@@ -13,9 +13,5 @@
     margin: 0px 20px;
     border-top: 1px solid #b0b0b0;
     height: 20px;
-}
-
-::-webkit-scrollbar {
-    display: none;
 }
 

@@ -1,8 +1,27 @@
 import './StyleSheets/Note.css'
-function Note(){
+import {BiEditAlt} from "react-icons/bi";
+import {AiOutlineDelete} from "react-icons/ai";
+import {useEffect} from "react";
+function Note(props){
+
+
+    const notEditClicked = ()=>{
+        props.getNoteValue(props.message)
+    }
+
+    const noteDeleteClicked = () => {
+        props.deleteNote(props.id);
+    }
 
     return(
-        <div  className='note'></div>
+        <div  className='note' id={props.id}  >
+            <div className='symbolWrapper'></div>
+            <div className='symbolContainer'>
+                <BiEditAlt className='editIcon' onClick={notEditClicked}/>
+                <AiOutlineDelete className='deleteIcon' onClick={noteDeleteClicked} />
+            </div>
+            <div className='noteMessageContainer'><p>{props.message}</p></div>
+        </div>
     )
 }
 

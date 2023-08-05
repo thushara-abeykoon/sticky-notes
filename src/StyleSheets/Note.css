@@ -1,5 +1,79 @@
 .note{
     height: 200px;
     border-radius: 20px;
-    background-color: #FFF0F5;
+    background-color: #fff6b9;
+    position: relative;
+}
+
+.symbolWrapper{
+    background-color: #696550;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.note:hover .symbolWrapper{
+    color: white;
+    border-radius: 20px ;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    position: absolute;
+}
+
+.symbolContainer{
+    width: 80px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+.editIcon, .deleteIcon{
+    font-size: 30px;
+}
+
+.noteMessageContainer{
+    max-width: 600px;
+    margin: 20px 40px ;
+    margin-right: 10px;
+    padding-right: 20px;
+    overflow-y: scroll;
+    overflow-x:hidden;
+    height: 130px;
+    position: absolute;
+}
+
+.note p{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+}
+
+
+
+/*.noteMessageContainer::-webkit-scrollbar-track{*/
+/*    background-color: #b0bffc;*/
+/*    border-radius: 20px;*/
+/*}*/
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+
+
+/* Handle */
+.noteMessageContainer::-webkit-scrollbar-thumb {
+    background: #e3d9a5;
+    border-radius: 10px;
+    opacity: 0.2;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:active {
+    background: #b9b188;
 }
