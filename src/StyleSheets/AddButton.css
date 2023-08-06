@@ -3,7 +3,7 @@
     height: 200px;
     width: 100%;
     border-radius: 20px;
-    background-color: #ffc4c4;
+    background-color: #ffc4fa;
     position: relative;
     animation: noteAppearing 0.5s;
     margin: auto;
@@ -17,7 +17,6 @@
     background-color: #4b4b4b;
     cursor: pointer;
     margin: auto;
-    margin-top: 20%;
     animation: btnAppearing 0.7s;
 }
 

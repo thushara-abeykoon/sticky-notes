@@ -53,7 +53,7 @@ function NoteContainer (props) {
             setIndex(index-1);
             console.log(notes);
             console.log(indexArr);
-        },200)
+        },150)
    }
 
 
