@@ -1,3 +1,15 @@
+.addBtnContainer{
+    display: grid;
+    height: 200px;
+    width: 100%;
+    border-radius: 20px;
+    background-color: #ffc4c4;
+    position: relative;
+    animation: noteAppearing 0.5s;
+    margin: auto;
+}
+
+
 .btnBackground{
     width: 60px;
     height: 60px;
@@ -5,7 +17,14 @@
     background-color: #4b4b4b;
     cursor: pointer;
     margin: auto;
-    margin-top: 60px;
+    margin-top: 20%;
+    animation: btnAppearing 0.7s;
+}
+
+@keyframes btnAppearing {
+    0%{opacity: 0}
+    50%{opacity: 0}
+    100%{opacity: 1}
 }
 
 .btnBackground:hover{

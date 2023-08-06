@@ -1,14 +1,24 @@
 .note{
     height: 200px;
+    width: 100%;
     border-radius: 20px;
     background-color: #fff6b9;
     position: relative;
+    margin: auto;
+}
+
+.noteAppear{
+    animation: noteAppearing 0.4s;
+}
+
+.noteDisappear{
+    animation: noteDisappearing 0.4s;
 }
 
 .symbolWrapper{
     background-color: #696550;
     opacity: 0;
-    transition: opacity 0.5s;
+    transition: opacity 0.3s;
 }
 
 .note:hover .symbolWrapper{
@@ -77,3 +87,34 @@
 ::-webkit-scrollbar-thumb:active {
     background: #b9b188;
 }
+
+.noteContentAppearing{
+    animation: noteContentAppearing 0.3s;
+}
+.noteContentDisappearing{
+    animation: noteContentDisappearing 0.3s;
+}
+
+
+/*ANIMATIONS*/
+
+@keyframes noteAppearing {
+    0% {width: 0; height:0}
+    100%{width: 100% ; height: 200px}
+}
+@keyframes noteDisappearing {
+    100%{width: 0;height: 0}
+}
+
+@keyframes noteContentAppearing {
+    0%{opacity: 0}
+    75%{opacity: 0}
+    100%{opacity: 1}
+}
+
+@keyframes noteContentDisappearing {
+    0%{opacity: 1}
+    25%{opacity: 0}
+    100%{opacity: 0}
+}
+

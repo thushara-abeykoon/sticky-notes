@@ -43,13 +43,19 @@ function App() {
         setEditorDisplay(true);
     }
 
+    const [searchMsg,setSearchMessage] = useState('');
+
+    const handleSearchMessage = (value) => {
+        setSearchMessage(value);
+    }
+
   return (
       <>
           <NoteEditor editorDisplay={editorDisplay} getValue={getValue} saveBtnClicked={saveBtnClicked} changeEditorDisplay={changeEditorDisplay} noteValue={noteValue} setNoteValue={setNoteValue} />
           <div className='main' >
-              <Header/>
+              <Header handleSearchMessage={handleSearchMessage}/>
               <div className='seperator'></div>
-              <NoteContainer addBtnClick={addBtnClick} note={msg} getNoteValue={getNoteValue} count={count} setCount={setCount} />
+              <NoteContainer addBtnClick={addBtnClick} note={msg} getNoteValue={getNoteValue} count={count} setCount={setCount} searchMessage={searchMsg} />
           </div>
       </>
 )
