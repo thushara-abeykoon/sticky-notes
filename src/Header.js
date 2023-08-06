@@ -26,7 +26,7 @@ function SearchBar(props) {
 
     return(
         <div className='searchArea' style={Object.assign({},shadow,widthChange)}>
-            <input type="text" placeholder='Search Your Plannings' onChange={(e)=>{handleWidthChange(e); handleSearchMessage(e)}} id='searchInput' onFocus={handleShadow} onBlur={()=>{setShadow({boxShadow:'none'})}} />
+            <input type="text" placeholder='Search Your Notes' onChange={(e)=>{handleWidthChange(e); handleSearchMessage(e)}} id='searchInput' onFocus={handleShadow} onBlur={()=>{setShadow({boxShadow:'none'})}} />
         </div>
     )
 }
