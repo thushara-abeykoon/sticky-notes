@@ -35,7 +35,7 @@ function Header(props) {
     return(
         <header>
             <div className='container'>
-                <h1>TO DO LIST</h1>
+                <h1>STICKY NOTES</h1>
                 <SearchBar handleSearchMessage={props.handleSearchMessage} />
             </div>
         </header>
