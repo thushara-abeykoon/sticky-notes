@@ -22,9 +22,9 @@ To run the application locally, follow these steps:
 
 ## Screenshots
 
-![Screenshot 1](Screenshots/screenshot1.jpg)
-![Screenshot 2](Screenshots/screenshot3.jpg)
-![Screenshot 3](Screenshots/screenshot4.jpg)
+![Screenshot 1](Screenshots/Screenshot1.jpg)
+![Screenshot 2](Screenshots/Screenshot3.jpg)
+![Screenshot 3](Screenshots/Screenshot4.jpg)
 
 ---
 
