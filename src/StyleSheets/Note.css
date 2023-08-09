@@ -7,14 +7,6 @@
     margin: auto;
 }
 
-.noteAppear{
-    animation: noteAppearing 0.4s;
-}
-
-.noteDisappear{
-    animation: noteDisappearing 0.4s;
-}
-
 .symbolWrapper{
     background-color: #696550;
     opacity: 0;
@@ -40,6 +32,7 @@
     position: absolute;
     right: 10px;
     bottom: 10px;
+    animation: noteContentAppearing 0.25s;
 }
 
 .editIcon, .deleteIcon{
@@ -47,7 +40,7 @@
 }
 
 .noteMessageContainer{
-    max-width: 600px;
+    max-width: 70%;
     margin: 20px 40px ;
     margin-right: 10px;
     padding-right: 20px;
@@ -55,6 +48,7 @@
     overflow-x:hidden;
     height: 130px;
     position: absolute;
+    animation: noteContentAppearing 0.2s;
 }
 
 .note p{
@@ -83,17 +77,47 @@
     opacity: 0.2;
 }
 
+.note-enter{
+    animation: noteAppearing 500ms;
+}
+
+.note-enter-active{
+    opacity: 1;
+
+}
+
+.note-exit {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.note-exit-active {
+    animation: noteDisappearing 500ms ;
+}
+
+.noteContent-enter{
+    opacity: 0;
+}
+
+.noteContent-enter-active{
+    opacity: 1;
+    transition: opacity 500ms;
+}
+
+.noteContent-exit{
+    opacity: 1;
+}
+
+.noteContent-exit-active{
+    opacity: 0;
+    transition: opacity 200ms;
+}
+
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:active {
     background: #b9b188;
 }
 
-.noteContentAppearing{
-    animation: noteContentAppearing 0.3s;
-}
-.noteContentDisappearing{
-    animation: noteContentDisappearing 0.3s;
-}
 
 
 /*ANIMATIONS*/

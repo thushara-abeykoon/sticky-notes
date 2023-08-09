@@ -3,18 +3,21 @@
     height: 200px;
     width: 100%;
     border-radius: 20px;
-    background-color: #ffc4fa;
+    background-color: #75c8ff;
     position: relative;
     animation: noteAppearing 0.5s;
     margin: auto;
 }
 
+.addBtnContainerDark{
+    background-color: #000c4b;
+}
 
 .btnBackground{
     width: 60px;
     height: 60px;
     border-radius: 60px;
-    background-color: #4b4b4b;
+    background-color: #bdbdbd;
     cursor: pointer;
     margin: auto;
     animation: btnAppearing 0.7s;
@@ -27,12 +30,20 @@
 }
 
 .btnBackground:hover{
-    background-color: #181818;
+    background-color: #ababab;
 }
 
 .addBtnPlus{
     margin-left:12px ;
     margin-top:5px ;
-    color: white;
+    color: #000000;
     font-size: 50px;
+}
+
+.btnBackgroundDark{
+    background-color: #000000;
+}
+
+.btnBackgroundDark:hover{
+    background-color: #1a1a1a;
 }

@@ -25,8 +25,8 @@ function SearchBar(props) {
     }
 
     return(
-        <div className='searchArea' style={Object.assign({},shadow,widthChange)}>
-            <input type="text" placeholder='Search Your Notes' onChange={(e)=>{handleWidthChange(e); handleSearchMessage(e)}} id='searchInput' onFocus={handleShadow} onBlur={()=>{setShadow({boxShadow:'none'})}} />
+        <div className={(props.isDarkMode)?'searchArea searchAreaDark ':'searchArea'} style={Object.assign({},shadow,widthChange)}>
+            <input style={(props.isDarkMode)? {backgroundColor:'#2c2c2c', color:'#e0e0e0'} :{}} type="text" placeholder='Search Your Notes' onChange={(e)=>{handleWidthChange(e); handleSearchMessage(e)}} id='searchInput' onFocus={handleShadow} onBlur={()=>{setShadow({boxShadow:'none'})}} />
         </div>
     )
 }
@@ -35,8 +35,8 @@ function Header(props) {
     return(
         <header>
             <div className='container'>
-                <h1>STICKY NOTES</h1>
-                <SearchBar handleSearchMessage={props.handleSearchMessage} />
+                <h1 className={(props.isDarkMode)?'h1Dark':''}>STICKY NOTES</h1>
+                <SearchBar handleSearchMessage={props.handleSearchMessage} isDarkMode={props.isDarkMode} />
             </div>
         </header>
 

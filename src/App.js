@@ -3,6 +3,7 @@ import Header from "./Header";
 import NoteContainer from "./NoteContainer";
 import NoteEditor from "./NoteEditor";
 import {useState} from "react";
+import ModeChanger from "./modeChanger";
 
 function App() {
 
@@ -49,13 +50,20 @@ function App() {
         setSearchMessage(value);
     }
 
+    const [isDarkMode,setIsDarkMode] = useState(false);
+
+    const getMode=(mode)=>{
+        setIsDarkMode(mode);
+    }
+
   return (
       <>
-          <NoteEditor editorDisplay={editorDisplay} getValue={getValue} saveBtnClicked={saveBtnClicked} changeEditorDisplay={changeEditorDisplay} noteValue={noteValue} setNoteValue={setNoteValue} />
-          <div className='main' >
-              <Header handleSearchMessage={handleSearchMessage}/>
+          <ModeChanger getMode={getMode} />
+          <NoteEditor editorDisplay={editorDisplay} getValue={getValue} saveBtnClicked={saveBtnClicked} changeEditorDisplay={changeEditorDisplay} noteValue={noteValue} setNoteValue={setNoteValue} isDarkMode={isDarkMode} />
+          <div className={(isDarkMode)?'main mainDark':'main'} >
+              <Header handleSearchMessage={handleSearchMessage} isDarkMode={isDarkMode}/>
               <div className='seperator'></div>
-              <NoteContainer addBtnClick={addBtnClick} note={msg} getNoteValue={getNoteValue} count={count} setCount={setCount} searchMessage={searchMsg} />
+              <NoteContainer addBtnClick={addBtnClick} note={msg} getNoteValue={getNoteValue} count={count} setCount={setCount} searchMessage={searchMsg} isDarkMode={isDarkMode} />
           </div>
       </>
 )

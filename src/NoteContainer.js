@@ -1,5 +1,5 @@
 import './StyleSheets/NoteContainer.css'
-import Note from "./Note";
+import NoteBackup from "./Note";
 import AddButton from "./AddButton";
 import {useEffect, useState} from "react";
 
@@ -65,8 +65,8 @@ function NoteContainer (props) {
 
     return (
         <div className='noteContainer'>
-            <AddButton addBtnClick={props.addBtnClick}/>
-            {indexArr.map(index=><Note message={notes[index]} getNoteValue={props.getNoteValue} key={index} id={index} deleteNote={deleteNote}/>)}
+            <AddButton addBtnClick={props.addBtnClick} isDarkMode={props.isDarkMode}/>
+            {indexArr.map(index=><NoteBackup message={notes[index]} getNoteValue={props.getNoteValue} key={index} id={index} deleteNote={deleteNote} isDarkMode={props.isDarkMode}/>)}
         </div>
     );
 

@@ -1,0 +1,46 @@
+.darkModeIcon{
+    color: rgb(255, 255, 0);
+    font-size: 30px;
+}
+.lightModeBtn{
+    font-size: 30px;
+    color: white;
+}
+
+.modeBtnLight{
+    padding: 8px 0;
+    text-align: right;
+    width: 40px;
+    background-color: #5a78f5;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    outline: none;
+    border: none;
+    position: fixed;
+    left: 0;
+    top: 20px;
+    transition: width 0.5s;
+    cursor: pointer;
+    box-shadow: 0 0 100px 30px #fffb00;
+}
+
+.modeBtnDark{
+    padding: 8px 0;
+    text-align: right;
+    width: 40px;
+    background-color: #0c1445;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    outline: none;
+    border: none;
+    position: fixed;
+    left: 0;
+    top: 20px;
+    transition: width 0.5s;
+    cursor: pointer;
+    box-shadow: 0 0 100px 30px #cec600;
+}
+
+.modeBtnDark:hover, .modeBtnLight:hover, .modeBtnLight:active, .modeBtnDark:active{
+    width: 55px;
+}

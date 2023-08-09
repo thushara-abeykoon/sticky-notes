@@ -7,8 +7,11 @@
     grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
     grid-template-rows: repeat(auto-fill,minmax(200px,200px));
     overflow: scroll;
+    transition: 500ms;
 }
 .noteContainer::-webkit-scrollbar{
     display: none;
 }
+
+
 

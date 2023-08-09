@@ -1,11 +1,16 @@
 import './StyleSheets/AddButton.css'
 import {HiPlusSmall} from "react-icons/hi2";
-function AddButton({addBtnClick}){
+import {useEffect} from "react";
+function AddButton(props){
+
+    useEffect(()=>{
+        console.log(props.isDarkMode)
+    })
 
     return(
-        <div className='addBtnContainer'>
-            <div className='btnBackground' onClick={addBtnClick}>
-                <HiPlusSmall className='addBtnPlus' />
+        <div className={(props.isDarkMode)?'addBtnContainer addBtnContainerDark':'addBtnContainer'}>
+            <div className={(props.isDarkMode)?'btnBackground btnBackgroundDark':'btnBackground'} onClick={props.addBtnClick}>
+                <HiPlusSmall className='addBtnPlus' style={(props.isDarkMode)?{color:'white'}:{}} />
             </div>
         </div>
     )
