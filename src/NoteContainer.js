@@ -18,20 +18,12 @@ function removeFromArray(arr,index){
 
 function getSearchIndexes(arr,message){
     let resultArr = [];
-
-    if(message===undefined){
-        arr.forEach((elm,index)=>{
-            resultArr.push(index)
-        })
-    }
-    else{
         arr.forEach((elm,index)=>{
                 if(elm.startsWith(message))
                     resultArr.push(index);
             }
         )
         return resultArr;
-    }
 }
 
 function NoteContainer (props) {
@@ -49,16 +41,11 @@ function NoteContainer (props) {
 
         setTimeout(()=>{
             setNotes(removeFromArray(notes,noteId));
-            // setIndexArr(removeFromArray(indexArr,indexArr.length-1))
-            // setIndex(index-1);
-            console.log(notes);
-            // console.log(indexArr);
-        },150)
+            setIndexArr(removeFromArray(indexArr,indexArr.length-1))
+            setIndex(index-1);
+        },500)
    }
 
-   useEffect(()=>{
-       console.log(notes)
-   },[notes]);
 
 
     useEffect(()=>{

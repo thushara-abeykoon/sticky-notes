@@ -19,9 +19,8 @@
     position: fixed;
     left: 0;
     top: 20px;
-    transition: width 0.5s;
+    transition: width 0.5s, box-shadow 0.5s;
     cursor: pointer;
-    box-shadow: 0 0 100px 30px #fffb00;
 }
 
 .modeBtnDark{
@@ -36,9 +35,18 @@
     position: fixed;
     left: 0;
     top: 20px;
-    transition: width 0.5s;
+    transition: width 0.5s, box-shadow 0.5s;
     cursor: pointer;
-    box-shadow: 0 0 100px 30px #cec600;
+}
+
+.modeBtnLight:hover{
+
+    box-shadow: 0 0 500px 100px #5e5e5e;
+}
+
+.modeBtnDark:hover{
+
+    box-shadow: 0 0 500px 100px #ffffff;
 }
 
 .modeBtnDark:hover, .modeBtnLight:hover, .modeBtnLight:active, .modeBtnDark:active{

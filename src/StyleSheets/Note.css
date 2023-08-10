@@ -92,8 +92,6 @@
 }
 
 .note-exit {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 .note-exit-active {
@@ -133,6 +131,7 @@
 }
 @keyframes noteDisappearing {
     100%{width: 0;height: 0}
+    100%{opacity: 0.8}
 }
 
 @keyframes noteContentAppearing {

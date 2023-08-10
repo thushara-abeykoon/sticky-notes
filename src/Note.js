@@ -11,6 +11,11 @@ function Note(props){
         setDeleted(true);
     },[]);
 
+
+    useEffect(()=>{
+        console.log(deleted);
+    },[deleted])
+
     const noteEditClicked = () => {
         props.getNoteValue(props.message);
     }
