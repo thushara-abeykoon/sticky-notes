@@ -33,6 +33,10 @@
     animation: editorAppearing 0.3s;
 }
 
+.editorDark{
+    background-color: black;
+}
+
 .editor textarea{
     background-color: white;
     margin: 20px 40px;
@@ -70,17 +74,47 @@
     animation: displayContent 0.3s;
 }
 
+.textAreaDark{
+    background-color: black;
+    color: white;
+}
+
+.saveBtnDark{
+    width: 40px;
+    height: 40px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 60px;
+    border: none;
+    background-color: black;
+    cursor: pointer;
+    padding: 2px 2px;
+    transition: background-color 0.25s;
+    animation: displayContent 0.3s;
+}
+
+.saveBtnDark:hover, .saveBtnDark:focus{
+    background-color: #0058ff;
+}
 
 .plusIcon{
     color: black;
     font-size: 30px;
 }
 
+.plusIconDark{
+    color: white;
+    font-size: 30px;
+}
+
+.saveBtnDark:hover .plusIconDark{
+   color: black;
+}
+
 .saveBtn:hover{
-    background-color: #61677A;
+    background-color: #001354;
 }
 .saveBtn:focus{
-    background-color: #61677A;
+    background-color: #001354;
 }
 
 .saveBtn:hover .plusIcon{
@@ -104,10 +138,37 @@
     animation: displayContent 0.3s;
 }
 
+.crossBtnDark{
+    width: 35px;
+    height: 30px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 70px;
+    border: none;
+    background-color: black;
+    cursor: pointer;
+    padding: 5px 5px;
+    transition: background-color 0.25s;
+    animation: displayContent 0.3s;
+}
+
+.crossBtnDark:hover, .crossBtnDark:focus{
+    background-color: #ff0000;
+}
+
 .crossIcon{
     margin-left: 4px;
     color: black;
     font-size: 20px;
+}
+
+.crossIconDark{
+    margin-left: 4px;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.crossBtnDark:hover .crossIconDark{
+    color: black;
 }
 
 .crossBtn:hover{

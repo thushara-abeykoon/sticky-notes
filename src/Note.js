@@ -31,7 +31,7 @@ function Note(props){
                     exitActive: 'note-exit-active'
                 }}
                 unmountOnExit>
-                <div className='note'  >
+                <div className={(props.isDarkMode)?'note noteDark':'note'}  >
                     <CSSTransition
                         in={deleted}
                         timeout={400}

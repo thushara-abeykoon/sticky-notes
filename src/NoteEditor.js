@@ -28,16 +28,16 @@ function NoteEditor(props){
 
     const editor = <div className='editorContainer'>
         <div className='editorBackground' onClick={closeEditor}></div>
-        <div className='editor'>
+        <div className={(props.isDarkMode)?'editor editorDark':'editor'}>
             <div className='editorBtnContainer'>
-                <div className='saveBtn' onClick={handleTextAreaValue}>
-                    <HiPlusSmall className='plusIcon'/>
+                <div className={(props.isDarkMode)?'saveBtnDark':'saveBtn'} onClick={handleTextAreaValue}>
+                    <HiPlusSmall className={(props.isDarkMode)?'plusIconDark':'plusIcon'}/>
                 </div>
-                <div className='crossBtn' onClick={closeEditor}>
-                    <AiOutlineClose className='crossIcon' />
+                <div className={(props.isDarkMode)?'crossBtnDark':'crossBtn'} onClick={closeEditor}>
+                    <AiOutlineClose className={(props.isDarkMode)?'crossIconDark':'crossIcon'} />
                 </div>
             </div>
-            <textarea value={textAreaValue} autoFocus={true} name="editor" id="editor" cols="100" rows="20" onChange={(e)=>{setTextAreaValue(e.target.value)}}></textarea>
+            <textarea style={(props.isDarkMode)?{backgroundColor:'black',color:'white'}:{}} value={textAreaValue} autoFocus={true} name="editor" id="editor" cols="100" rows="20" onChange={(e)=>{setTextAreaValue(e.target.value)}}></textarea>
         </div>
     </div>;
 

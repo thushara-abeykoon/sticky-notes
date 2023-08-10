@@ -17,7 +17,7 @@
     width: 60px;
     height: 60px;
     border-radius: 60px;
-    background-color: #bdbdbd;
+    background-color: #969696;
     cursor: pointer;
     margin: auto;
     animation: btnAppearing 0.7s;
@@ -30,7 +30,7 @@
 }
 
 .btnBackground:hover{
-    background-color: #ababab;
+    background-color: #818181;
 }
 
 .addBtnPlus{

@@ -1,5 +1,5 @@
 import './StyleSheets/NoteContainer.css'
-import NoteBackup from "./Note";
+import Note  from "./Note";
 import AddButton from "./AddButton";
 import {useEffect, useState} from "react";
 
@@ -45,17 +45,20 @@ function NoteContainer (props) {
         setIndexArr((props.note!==undefined)?indexArr=>[...indexArr,index]:[]);
     },[props.count])
 
-   const deleteNote = (noteId,setDeleted)=>{
+   const deleteNote = (noteId)=>{
 
         setTimeout(()=>{
             setNotes(removeFromArray(notes,noteId));
-            setIndexArr(removeFromArray(indexArr,indexArr.length-1))
-            setIndex(index-1);
+            // setIndexArr(removeFromArray(indexArr,indexArr.length-1))
+            // setIndex(index-1);
             console.log(notes);
-            console.log(indexArr);
+            // console.log(indexArr);
         },150)
    }
 
+   useEffect(()=>{
+       console.log(notes)
+   },[notes]);
 
 
     useEffect(()=>{
@@ -66,7 +69,7 @@ function NoteContainer (props) {
     return (
         <div className='noteContainer'>
             <AddButton addBtnClick={props.addBtnClick} isDarkMode={props.isDarkMode}/>
-            {indexArr.map(index=><NoteBackup message={notes[index]} getNoteValue={props.getNoteValue} key={index} id={index} deleteNote={deleteNote} isDarkMode={props.isDarkMode}/>)}
+            {indexArr.map(index=><Note message={notes[index]} getNoteValue={props.getNoteValue} key={index} id={index} deleteNote={deleteNote} isDarkMode={props.isDarkMode}/>)}
         </div>
     );
 
