@@ -6,7 +6,7 @@ function AddButton(props){
     return(
         <div className={(props.isDarkMode)?'addBtnContainer addBtnContainerDark':'addBtnContainer'}>
             <div className={(props.isDarkMode)?'btnBackground btnBackgroundDark':'btnBackground'} onClick={props.addBtnClick}>
-                <HiPlusSmall className='addBtnPlus' style={(props.isDarkMode)?{color:'white'}:{}} />
+                <HiPlusSmall className='addBtnPlus' style={(props.isDarkMode)?{color:'black'}:{}} />
             </div>
         </div>
     )

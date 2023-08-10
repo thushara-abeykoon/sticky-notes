@@ -16,7 +16,7 @@ function SearchBar(props) {
     }
 
     function handleShadow(){
-        setShadow({boxShadow: '0px 0px 10px 2px #cccccc'})
+        setShadow((props.isDarkMode)?{boxShadow: '0px 0px 10px 2px #3f3f3f'}:{boxShadow: '0px 0px 10px 2px #cccccc'})
     }
 
 
@@ -25,7 +25,7 @@ function SearchBar(props) {
     }
 
     return(
-        <div className={(props.isDarkMode)?'searchArea searchAreaDark ':'searchArea'} style={Object.assign({},shadow,widthChange)}>
+        <div className={(props.isDarkMode)?'searchAreaDark ':'searchArea'} style={Object.assign({},shadow,widthChange)}>
             <input style={(props.isDarkMode)? {backgroundColor:'#2c2c2c', color:'#e0e0e0'} :{}} type="text" placeholder='Search Your Notes' onChange={(e)=>{handleWidthChange(e); handleSearchMessage(e)}} id='searchInput' onFocus={handleShadow} onBlur={()=>{setShadow({boxShadow:'none'})}} />
         </div>
     )

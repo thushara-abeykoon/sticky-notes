@@ -3,18 +3,15 @@ import Note  from "./Note";
 import AddButton from "./AddButton";
 import {useEffect, useState} from "react";
 
-function removeFromArray(arr,index){
-    let newArr = [];
-    for(let i in arr){
-        if(i < index)
-            newArr[i] = arr[i]
-        else if(i>index)
-            newArr[i-1] = arr[i];
 
-    }
+function removeFromArr(arr,id){
+    let newArr = [];
+    arr.forEach((elm,index)=>{
+        if(index!==id)
+            newArr.push(elm);
+    })
     return newArr;
 }
-
 
 function getSearchIndexes(arr,message){
     let resultArr = [];
@@ -37,20 +34,20 @@ function NoteContainer (props) {
         setIndexArr((props.note!==undefined)?indexArr=>[...indexArr,index]:[]);
     },[props.count])
 
-   const deleteNote = (noteId)=>{
 
-        setTimeout(()=>{
-            setNotes(removeFromArray(notes,noteId));
-            setIndexArr(removeFromArray(indexArr,indexArr.length-1))
-            setIndex(index-1);
-        },500)
-   }
 
 
 
     useEffect(()=>{
             setIndexArr(getSearchIndexes(notes,props.searchMessage));
     },[props.searchMessage])
+
+
+    function deleteNote(noteId){
+        setNotes(removeFromArr(notes,noteId))
+        setIndexArr(removeFromArr(indexArr,indexArr.length-1))
+        setIndex(index-1);
+    }
 
 
     return (

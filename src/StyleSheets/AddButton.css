@@ -17,7 +17,7 @@
     width: 60px;
     height: 60px;
     border-radius: 60px;
-    background-color: #969696;
+    background-color: #000000;
     cursor: pointer;
     margin: auto;
     animation: btnAppearing 0.7s;
@@ -30,20 +30,20 @@
 }
 
 .btnBackground:hover{
-    background-color: #818181;
+    background-color: #2d2d2d;
 }
 
 .addBtnPlus{
     margin-left:12px ;
     margin-top:5px ;
-    color: #000000;
+    color: #ffffff;
     font-size: 50px;
 }
 
 .btnBackgroundDark{
-    background-color: #000000;
+    background-color: #8f8f8f;
 }
 
 .btnBackgroundDark:hover{
-    background-color: #1a1a1a;
+    background-color: #9a9a9a;
 }

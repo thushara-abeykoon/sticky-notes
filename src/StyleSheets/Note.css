@@ -92,10 +92,12 @@
 }
 
 .note-exit {
+    opacity: 1;
 }
 
 .note-exit-active {
-    animation: noteDisappearing 500ms ;
+    opacity: 0;
+    transition: opacity 1s;
 }
 
 .noteContent-enter{
@@ -130,8 +132,8 @@
     100%{width: 100% ; height: 200px}
 }
 @keyframes noteDisappearing {
+    0%{width: 100%; height:200px}
     100%{width: 0;height: 0}
-    100%{opacity: 0.8}
 }
 
 @keyframes noteContentAppearing {

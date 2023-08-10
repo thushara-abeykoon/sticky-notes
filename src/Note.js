@@ -12,39 +12,30 @@ function Note(props){
     },[]);
 
 
-    useEffect(()=>{
-        console.log(deleted);
-    },[deleted])
-
     const noteEditClicked = () => {
         props.getNoteValue(props.message);
     }
 
 
     const noteDeleteClicked = () => {
-        setDeleted(false);
+        props.deleteNote(props.id);
     }
     return(
-        <>
             <CSSTransition
                 in={deleted}
                 timeout={400}
                 classNames={{
                     enter: 'note-enter',
                     enterActive:'note-enter-active',
-                    exit: 'note-exit',
-                    exitActive: 'note-exit-active'
                 }}
                 unmountOnExit>
-                <div className={(props.isDarkMode)?'note noteDark':'note'}  >
+                <div className={(props.isDarkMode)?'note noteDark':'note'} >
                     <CSSTransition
                         in={deleted}
                         timeout={400}
                         classNames={{
                             enter: 'noteContent-enter',
                             enterActive:'noteContent-enter-active',
-                            exit: 'noteContent-exit',
-                            exitActive: 'noteContent-exit-active'
                         }}
                         unmountOnExit>
                         <div>
@@ -58,7 +49,6 @@ function Note(props){
                     </CSSTransition>
                 </div>
             </CSSTransition>
-        </>
     )
 }
 
